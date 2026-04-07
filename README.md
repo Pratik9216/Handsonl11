@@ -15,6 +15,8 @@ Amazon S3 (Simple Storage Service) is an object storage service offered by AWS t
 
 ### S3 Bucket Setup
 Only one bucket was used in this lab:
+<img width="691" height="327" alt="image" src="https://github.com/user-attachments/assets/c0b8a15c-1d43-461e-bfed-9720eb7b6421" />
+
 
 | Bucket Name | Purpose |
 |-------------|---------|
