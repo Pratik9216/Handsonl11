@@ -156,6 +156,7 @@ Result:
 
 ### Query 2 — Orders by Product Category
 Returns the count of orders in each product category, sorted by most popular.
+
 <img width="691" height="331" alt="image" src="https://github.com/user-attachments/assets/1ad54d16-cd27-4384-8246-8750f632405a" />
 
 Result:
@@ -165,6 +166,7 @@ Result:
 
 ### Query 3 — Revenue and Quantity by Fulfilment Method
 Compares fulfilment methods (Amazon vs Merchant) by order volume, units sold, and revenue — excluding cancelled and pending orders.
+
 <img width="691" height="330" alt="image" src="https://github.com/user-attachments/assets/a61edbbd-6522-4bec-8399-4a9cb48cc320" />
 
 Result:
@@ -186,6 +188,7 @@ Result:
 
 ### Query 5 — Top 5 Best-Selling SKUs per Category
 Uses a CTE + `ROW_NUMBER()` window function to rank SKUs within each category by total revenue, returning only the top 5 per category.
+
 <img width="692" height="326" alt="image" src="https://github.com/user-attachments/assets/6ce8fb05-fe37-4a5f-b18f-1d49717aeb44" />
 
 Result:
