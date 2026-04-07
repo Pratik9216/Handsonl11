@@ -1,0 +1,11 @@
+order_id,date,status,fulfilment,sales_channel,ship_service_level,style,sku,category,size,asin,courier_status,qty,currency,amount,ship_city,ship_state,ship_postal_code,ship_country,promotion_ids,b2b,fulfilled_by
+405-8078784-5731545,04-01-22,Shipped,Merchant,Amazon.in,Standard,JNE3781,JNE3781-KR-L,kurta,L,B09KXVBD7Z,Shipped,1,INR,647.00,MUMBAI,MAHARASHTRA,400081,IN,,FALSE,Easy Ship
+408-5644879-4757146,04-01-22,Shipped - Delivered to Buyer,Easy Ship,Amazon.in,Standard,JNE3405,JNE3405-BL-XL,western dress,XL,B09K3TNW3Q,Delivered,1,INR,1722.00,BENGALURU,KARNATAKA,560085,IN,,FALSE,Easy Ship
+407-7634935-0963510,04-01-22,Shipped,Easy Ship,Amazon.in,Standard,JNE3371,JNE3371-GR-L,top,L,B09K3RQS87,Shipped,1,INR,1339.00,KOLKATA,WEST BENGAL,700095,IN,,FALSE,Easy Ship
+171-9198151-1101146,04-01-22,Shipped,Easy Ship,Amazon.in,Expedited,JNE3461,JNE3461-BL-M,top,M,B09KLKJQ44,Shipped,1,INR,1101.00,VADODARA,GUJARAT,390001,IN,,FALSE,Easy Ship
+404-0687676-7273146,04-01-22,Shipped,Easy Ship,Amazon.in,Standard,JNE3659,JNE3659-PK-S,kurta,S,B09K2TZBPF,Shipped,1,INR,425.00,MUMBAI,MAHARASHTRA,400062,IN,,FALSE,Easy Ship
+403-9615476-3049112,04-01-22,Shipped,Easy Ship,Amazon.in,Standard,SET3961,SET3961-BL-XS,set,XS,B09WGJ1Y88,Shipped,1,INR,1393.00,BENGALURU,KARNATAKA,560085,IN,,FALSE,Easy Ship
+171-5521436-3922707,04-01-22,Shipped,Easy Ship,Amazon.in,Standard,JNE3401,JNE3401-BL-S,ethnic dress,S,B09K3QY8Q3,Shipped,1,INR,1379.00,PUNE,MAHARASHTRA,411014,IN,,FALSE,Easy Ship
+407-5865036-2782752,04-01-22,Shipped,Easy Ship,Amazon.in,Expedited,SET3946,SET3946-BL-M,set,M,B09WNDFSKD,Shipped,1,INR,1259.00,DIBRUGARH,ASSAM,786001,IN,,FALSE,Easy Ship
+405-3247735-0079909,04-01-22,Cancelled,Merchant,Amazon.in,Standard,JNE3781,JNE3781-WH-S,kurta,S,B09KXP6S3G,Cancelled,0,INR,0.00,GHAZIABAD,UTTAR PRADESH,201301,IN,,FALSE,Easy Ship
+406-5546921-0930749,04-01-22,Shipped,Merchant,Amazon.in,Standard,JNE3781,JNE3781-KR-3XL,kurta,3XL,B09KXSHGQQ,Shipped,1,INR,604.00,RAIPUR,CHHATTISGARH,492007,IN,,FALSE,Easy Ship

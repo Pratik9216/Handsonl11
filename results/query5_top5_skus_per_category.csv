@@ -1,0 +1,11 @@
+category,sku,total_revenue,total_units_sold,rank
+blouse,JNE3123-BL-M,42310.00,38,1
+blouse,JNE3123-BL-S,39820.00,35,2
+blouse,JNE3123-BL-L,37450.00,33,3
+blouse,JNE3211-WH-M,31200.00,28,4
+blouse,JNE3211-WH-S,28910.00,26,5
+ethnic dress,JNE3401-BL-S,98230.00,71,1
+ethnic dress,JNE3401-BL-M,91450.00,66,2
+ethnic dress,JNE3401-BL-L,87340.00,63,3
+ethnic dress,JNE3405-GR-M,81200.00,59,4
+ethnic dress,JNE3405-GR-S,76430.00,55,5
