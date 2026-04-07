@@ -15,6 +15,7 @@ Amazon S3 (Simple Storage Service) is an object storage service offered by AWS t
 
 ### S3 Bucket Setup
 Only one bucket was used in this lab:
+
 <img width="691" height="327" alt="image" src="https://github.com/user-attachments/assets/c0b8a15c-1d43-461e-bfed-9720eb7b6421" />
 
 
@@ -28,9 +29,11 @@ Only one bucket was used in this lab:
 3. Open `handson-11cc` → Create folder → name it `raw`
 4. Upload `Amazon Sale Report.csv` into the `raw/` folder (65.7 MB, uploaded April 7, 2026)
 
+<img width="693" height="332" alt="image" src="https://github.com/user-attachments/assets/f1d92967-570f-4adc-9d6f-962846fea76d" />
+
 Below is the processed data in the S3 bucket; this bucket also contains a `processed/` folder (auto-created by Athena when saving query results).
 
----
+<img width="693" height="332" alt="image" src="https://github.com/user-attachments/assets/249c5e97-14eb-47a3-af5d-90c4133fd43d" />
 
 ## Step 2 — IAM Role (Identity and Access Management)
 ### What is an IAM Role?
@@ -60,6 +63,8 @@ AWS IAM (Identity and Access Management) is the service that controls who or wha
 3. Attach policies: `AmazonS3FullAccess`, `AWSGlueConsoleFullAccess`, `AWSGlueServiceRole`
 4. Role name: `chicken_roll`
 5. Click **Create role**
+
+<img width="692" height="325" alt="image" src="https://github.com/user-attachments/assets/ec28d313-0827-4f26-9721-4e85ab001159" />
 
 ---
 
@@ -94,6 +99,9 @@ AWS Glue is a fully managed ETL (Extract, Transform, Load) service. A Glue Crawl
 6. Schedule: On demand → Click **Create crawler**
 7. Select the crawler → click **Run**
 
+<img width="692" height="331" alt="image" src="https://github.com/user-attachments/assets/f75c7964-d8c8-4aff-8954-44ccceb3fecf" />
+
+
 ### Crawler Run History
 
 | Run # | Start Time (UTC) | End Time (UTC) | Duration | Status | Table Changes |
@@ -113,6 +121,8 @@ The CloudWatch log group `/aws-glue/crawlers` confirms the following key events 
 - Crawler has finished running and is in state READY
 - Run Summary: ADD: 1
 
+<img width="692" height="366" alt="image" src="https://github.com/user-attachments/assets/33335e25-55fa-4f48-a6a3-3da53b4ad678" />
+
 ---
 
 ## Step 5 — Configure Amazon Athena
@@ -127,6 +137,8 @@ The CloudWatch log group `/aws-glue/crawlers` confirms the following key events 
 | `amazon_sale_report_csv` | `output_db` | Created by Glue Crawler — full dataset |
 | `raw` | `output_db` | Also visible as a queryable table |
 
+<img width="691" height="368" alt="image" src="https://github.com/user-attachments/assets/fce75f54-ae35-4fa0-9c60-3c0290b0013e" />
+
 ---
 
 ## Step 6 — Run the SQL Queries
@@ -136,27 +148,49 @@ Copy each query into the Athena Query Editor and click **Run**. Download results
 ### Query 1 — Basic Table Exploration
 Retrieves the first 10 records to verify the table is set up correctly.
 
-*(Output shown in results/ or docx file)*
+<img width="692" height="371" alt="image" src="https://github.com/user-attachments/assets/9de41a80-0160-48c2-9c19-3ffc2ab829a0" />
+
+Result:
+
+<img width="692" height="334" alt="image" src="https://github.com/user-attachments/assets/351061e2-5266-4739-af79-677e6a30fa06" />
 
 ### Query 2 — Orders by Product Category
 Returns the count of orders in each product category, sorted by most popular.
+<img width="691" height="331" alt="image" src="https://github.com/user-attachments/assets/1ad54d16-cd27-4384-8246-8750f632405a" />
 
-*(Output shown in results/ or docx file)*
+Result:
+
+<img width="692" height="330" alt="image" src="https://github.com/user-attachments/assets/fe9c48e9-4d42-4695-a4f7-28646e67983e" />
+
 
 ### Query 3 — Revenue and Quantity by Fulfilment Method
 Compares fulfilment methods (Amazon vs Merchant) by order volume, units sold, and revenue — excluding cancelled and pending orders.
+<img width="691" height="330" alt="image" src="https://github.com/user-attachments/assets/a61edbbd-6522-4bec-8399-4a9cb48cc320" />
 
-*(Output shown in results/ or docx file)*
+Result:
+
+<img width="692" height="330" alt="image" src="https://github.com/user-attachments/assets/add5fe8f-09b3-416c-98c2-134e1ca10a0c" />
+
 
 ### Query 4 — Monthly Sales Trend
 Shows how orders and revenue changed month-over-month, sorted chronologically. Uses `DATE_PARSE` to parse the `MM-DD-YY` string date column.
 
-*(Output shown in results/ or docx file)*
+<img width="691" height="330" alt="image" src="https://github.com/user-attachments/assets/f49b3286-72ea-4c3c-8646-10ab5c13a9f9" />
+
+Result:
+
+<img width="691" height="331" alt="image" src="https://github.com/user-attachments/assets/fc59b5ba-d87f-4063-b080-50705f3e3ebb" />
+
+
+
 
 ### Query 5 — Top 5 Best-Selling SKUs per Category
 Uses a CTE + `ROW_NUMBER()` window function to rank SKUs within each category by total revenue, returning only the top 5 per category.
+<img width="692" height="326" alt="image" src="https://github.com/user-attachments/assets/6ce8fb05-fe37-4a5f-b18f-1d49717aeb44" />
 
-*(Output shown in results/ or docx file)*
+Result:
+
+<img width="692" height="330" alt="image" src="https://github.com/user-attachments/assets/282dbf2c-893d-4b8f-b782-8e349b939efd" />
 
 ---
 
